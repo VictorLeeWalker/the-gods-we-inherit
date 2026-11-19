@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Gods We Inherit — Victor Lee Walker</title>
+<style>
+:root{color-scheme:light;--ink:#24211f;--muted:#665f58;--paper:#faf8f3;--accent:#5c4939}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif}main{max-width:710px;margin:auto;padding:clamp(22px,5vw,60px) 25px 100px}.landing{min-height:75vh;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{font:12px system-ui,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}h1{font-size:clamp(38px,7vw,66px);line-height:1.12;font-weight:normal;margin:.4em 0 .2em}h2{font-size:clamp(30px,5vw,43px);line-height:1.2;font-weight:normal;margin:0 0 .5em}.poem-subtitle{font-style:italic;color:var(--muted);font-size:17px;margin:-.3em 0 1.2em}.byline{font-style:italic;color:var(--muted);font-size:19px}.intro{font-size:19px;line-height:1.7;max-width:550px}.primary{border:1px solid var(--ink);background:var(--ink);color:white;padding:13px 20px;font:15px system-ui,sans-serif;cursor:pointer;border-radius:4px}.primary:hover{background:#51483f}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:16px 0 36px;font:13px system-ui,sans-serif;color:var(--muted)}.toolbar button{font:inherit;padding:7px 10px;border:1px solid #c6bfb6;background:transparent;color:var(--ink);border-radius:4px;cursor:pointer}.poem{font-size:clamp(18px,2.6vw,22px);line-height:1.3}.stanza{margin-bottom:.5em}.change{font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;background:none;border:0;padding:0;cursor:pointer;text-align:left}.change:focus-visible,.toolbar button:focus-visible,.primary:focus-visible{outline:3px solid #9a7551;outline-offset:4px}.hint{font:13px/1.6 system-ui,sans-serif;color:var(--muted);margin-bottom:24px}.credit{font:12px/1.6 system-ui,sans-serif;color:var(--muted);margin-top:38px}.hidden{display:none!important}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head><body><main>
+<section id="landing" class="landing"><p class="eyebrow">An interactive poem</p><h1>The Gods We Inherit</h1><p class="byline">by Victor Lee Walker</p><p class="intro">Inspired by Kaveh Akbar’s novel <em>Martyr!</em>, <em>The Gods We Inherit</em> explores the relationship between religious inheritance, identity, suffering, and the search for meaning. The poem considers what it means to inherit beliefs we did not choose and the struggle to reconcile those beliefs with our understanding of ourselves.</p><p class="intro">This interactive adaptation invites readers to participate in the creation of meaning. Throughout the poem, selected words can be changed, allowing language, imagery, and interpretation to shift with each choice. The religious text you select will also transform the accompanying scripture, instrumental music, and song title within the poem.</p><p class="intro">There is no single path through this experience. Each choice creates new possibilities for reading, questioning, and discovering meaning.</p><p class="intro"><strong>Click the underlined words to explore the poem.</strong></p><button class="primary" id="begin">Begin reading</button></section>
+<section id="reading" class="hidden" aria-label="Interactive poem"><h2>The Gods We <button class="change" data-cycle="Inherit|Question|Reject|Create">Inherit</button></h2><p class="poem-subtitle">After <em>Martyr!</em> by Kaveh Akbar</p><p class="poem-subtitle" style="margin-top:-.9em">by Victor Lee Walker</p><div class="toolbar"><button id="sound" aria-pressed="true">Music: on</button><label for="volume">Volume</label><input id="volume" type="range" min="0" max="100" value="24" aria-label="Music volume"><button id="restart">Start over</button></div><p class="hint">Click or tap any underlined word to change it. The sacred text also changes the song title, scripture, and music. Music can be paused at any time.</p>
+<div class="poem">
+<div class="stanza">Two men stand before you,<br>one bearing his <button class="change" data-cycle="scars|memories|secrets|victories">scars</button>,</div>
+<div class="stanza">the other his <button class="change" data-cycle="wounds|desires|fears|sins">wounds</button>,<br>fresh and sweet.</div>
+<div class="stanza">Both have bled,<br>but only one continues<br>to bleed,</div>
+<div class="stanza">unable to move forward<br>as he picks at the past.</div>
+<div class="stanza"><button class="change" data-cycle="Healing|Suffering|Martyrdom|Forgiveness">Healing</button> is virtuous,<br>though not every wound<br>disappears.</div>
+<div class="stanza">Some become more visible<br>under the lights,</div>
+<div class="stanza">tender to the touch,<br>reminders of the journey.</div>
+<div class="stanza">A <button class="change" id="religion">Bible</button> beneath<br>family photographs.<br>Its cracked spine<br>holds <button class="change" data-cycle="generations|histories|secrets|strangers">generations</button><br>together.</div>
+<div class="stanza">Dates of birth,<br>baptisms,<br>jumping the broom,<br>going on to glory.</div>
+<div class="stanza">A grandmother sings<br><em id="song-title">His Eye Is on the Sparrow,</em><br>but her good news<br>finds no place to rest.</div>
+<div class="stanza">A pot of hibiscus tea<br>rests on a cloth<br>beside a plate of cornbread.</div>
+<div class="stanza">You recite the <button class="change" data-cycle="prayers|lies|stories|promises">prayers</button><br>she taught you,<br>though you no longer <button class="change" data-cycle="believe|remember|surrender|belong">believe</button>.</div>
+<div class="stanza" id="scripture">Turn to Leviticus 18:22.<br>Thou shalt not lie<br>with mankind,<br>as with womankind.</div>
+<div class="stanza">The weight of this verse<br>makes you wonder<br>if your body inherited<br>a <button class="change" data-cycle="sin|truth|burden|gift">sin</button> that cannot<br>be repented for<br>or a life you have<br>no right to keep.</div>
+<div class="stanza">Let it live inside,<br>a womb of <button class="change" data-cycle="faith|doubt|fear|love">faith</button><br>you did not conceive<br>but are expected to bear,</div>
+<div class="stanza">like a child born<br>into the blood of belief,<br>expected to inherit<br>a <button class="change" data-cycle="God|name|lie|dream">God</button> before knowing<br>their own name.</div>
+<div class="stanza">Can you wash<br>the blood of your mother<br>from your body?</div>
+<div class="stanza">Scrape at it<br>when it dries?</div>
+<div class="stanza">Carry it on your cross?<br>Wear it around your neck?</div>
+<div class="stanza">What, then,<br>becomes of <button class="change" data-cycle="freedom|salvation|belonging|happiness">freedom</button>?</div>
+<div class="stanza">Can you inherit it<br>like a <button class="change" data-cycle="heretic|prophet|believer|stranger">heretic</button><br>who proclaims himself<br>an <button class="change" data-cycle="atheist|sinner|survivor|poet">atheist</button>?</div>
+<div class="stanza">What are you?</div>
+<div class="stanza">I can rewrite<br>your life in the margins<br>of this book,<br>but you still have to read.<br>And if I change the story,<br>you still must live it.</div>
+<div class="stanza">It's not your flesh,<br>but you wear it.</div>
+<div class="stanza">Carry it your entire life.</div>
+<div class="stanza">It would be shameful<br>to reject it,<br>so you drink it away,<br>but it's still there.</div>
+<div class="stanza">Then, you drug it,<br>and when it returns,<br>you wonder if dying<br>would give your life<br>more meaning.</div>
+<div class="stanza">The words of a poet<br>can soothe,<br>but the silence<br>of uncertainty<br>can kill.</div>
+<div class="stanza">Suffering doesn't<br>come with a trophy,<br>and martyrs will<br>someday be<br>forgotten,</div>
+<div class="stanza">but the truth<br>of who we are<br>lives long after<br>we fade.</div>
+<div class="stanza">Is heaven or hell<br>your destiny?<br>Martyrdom?<br>Nothing at all?<br>Or is all of it <button class="change" data-cycle="fiction|inheritance|salvation|truth">fiction</button>?</div>
+</div><p class="credit">An interactive poem by Victor Lee Walker. Scripture alternatives are poetic paraphrases, not verbatim translations. The Gita selection addresses desire, anger, and greed rather than homosexuality.</p></section>
+</main><audio id="audio-a" preload="none" loop></audio><audio id="audio-b" preload="none" loop></audio>
+<script>
+(()=>{'use strict';
+const options=[
+{book:'Bible',song:'His Eye Is on the Sparrow',src:'music/bible.mp3',scripture:'Turn to Leviticus 18:22.<br>Thou shalt not lie<br>with mankind,<br>as with womankind.'},
+{book:'Quran',song:"Tala’ al-Badru ‘Alayna",src:'music/quran.mp3',scripture:"Turn to Al-A'raf 7:81.<br>You approach men with desire<br>instead of women,<br>and are called transgressors."},
+{book:'Torah',song:'Hatikvah',src:'music/torah.mp3',scripture:'Turn to Leviticus 20:13.<br>If a man lies with a man<br>as with a woman,<br>both are condemned.'},
+{book:'Gita',song:'Raghupati Raghava Raja Ram',src:'music/gita.mp3',scripture:'Turn to Bhagavad Gita 16:21.<br>Desire, anger, and greed<br>are called three gates<br>leading toward destruction.'}];
+let religion=0,enabled=true,started=false,active=0,fadeToken=0;
+const audios=[document.getElementById('audio-a'),document.getElementById('audio-b')];
+const sound=document.getElementById('sound'),volume=document.getElementById('volume');
+const targetVolume=()=>Number(volume.value)/100;
+function refresh(){const o=options[religion];document.getElementById('religion').textContent=o.book;document.getElementById('song-title').textContent=o.song+',';document.getElementById('scripture').innerHTML=o.scripture;}
+function playSelected(){if(!started||!enabled)return;fadeToken++;const token=fadeToken;const next=1-active,old=audios[active],fresh=audios[next];fresh.pause();fresh.src=options[religion].src;fresh.currentTime=0;fresh.volume=0;const promise=fresh.play();if(promise&&promise.catch)promise.catch(()=>{sound.textContent='Tap to enable music';});let frame=0;const total=28;function fade(){if(token!==fadeToken)return;frame++;const ratio=Math.min(frame/total,1);fresh.volume=Math.min(1,targetVolume()*ratio);old.volume=Math.min(1,targetVolume()*(1-ratio));if(ratio<1){requestAnimationFrame(fade);}else{old.pause();old.removeAttribute('src');old.load();}}requestAnimationFrame(fade);active=next;}
+function startMusic(){if(!enabled)return;started=true;playSelected();}
+document.querySelectorAll('[data-cycle]').forEach(el=>{const words=el.dataset.cycle.split('|');let n=0;el.addEventListener('click',()=>{n=(n+1)%words.length;el.textContent=words[n];});});
+document.getElementById('religion').addEventListener('click',()=>{religion=(religion+1)%options.length;refresh();playSelected();});
+document.getElementById('begin').addEventListener('click',()=>{document.getElementById('landing').classList.add('hidden');document.getElementById('reading').classList.remove('hidden');window.scrollTo(0,0);startMusic();});
+sound.addEventListener('click',()=>{enabled=!enabled;sound.textContent=enabled?'Music: on':'Music: off';sound.setAttribute('aria-pressed',String(enabled));if(enabled)startMusic();else{fadeToken++;audios.forEach(a=>a.pause());}});
+volume.addEventListener('input',()=>{audios[active].volume=targetVolume();});
+document.getElementById('restart').addEventListener('click',()=>{location.reload();});
+refresh();
+})();
+</script></body></html>
